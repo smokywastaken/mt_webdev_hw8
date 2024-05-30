@@ -8,9 +8,8 @@
     <x-sidebar />
 @endsection
 @section('content')
-
-@endsection
-
-@section('footer')
-    <x-footer />
+<div class="container mt-4">
+    @include('posts.create')
+    @include('posts.index')
+</div>
 @endsection

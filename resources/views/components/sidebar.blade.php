@@ -1,20 +1,25 @@
 <div class="container">
     <div class="container-fluid">
-        <div class="d-flex flex-column button-group-vertical">
-            <button class="mb-2 btn">
-                b1
+        <nav class="d-flex flex-column button-group-vertical">
+            <a href="{{ route('profile.show') }}" class="mb-2 btn btn-dark">
+                Profile
+            </a>
+            <button class="mb-2 btn btn-dark">
+                Saved
             </button>
-            <button class="mb-2 btn">
-                b2
-            </button>
-            <button class='btn'>
-                b3
-            </button>
-        </div>
+            <a href="{{ route('logout') }}"
+               class="btn btn-dark"
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </nav>
     </div>
-    <div id="container">
-        <div class="alert alert-secondary">
-            2024.Website made by Mārtiņš Terentjevs
+    <footer class="mt-4">
+        <div class="alert alert-secondary text-center">
+            2024. Website made by Mārtiņš Terentjevs
         </div>
-    </div>
+    </footer>
 </div>
